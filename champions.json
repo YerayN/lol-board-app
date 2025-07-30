@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Jinx",
+    "rol": "Tirador",
+    "vidaBase": 20,
+    "velocidad": 2,
+    "habilidades": [
+      {
+        "nombre": "Chispitas",
+        "descripcion": "Inflige 4 puntos de daño al objetivo.",
+        "cooldown": 2
+      },
+      {
+        "nombre": "Supermegacohete",
+        "descripcion": "Inflige 6 puntos de daño en área.",
+        "cooldown": 5
+      }
+    ],
+    "lore": "Jinx es una criminal caótica que vive para sembrar el caos.",
+    "imagen": "https://static.wikia.nocookie.net/leagueoflegendsoficial/images/e/e2/JinxSquare.png/revision/latest/scale-to-width-down/100?cb=20160910010506&path-prefix=es"
+  },
+  {
+    "nombre": "Ezreal",
+    "rol": "Tirador",
+    "vidaBase": 18,
+    "velocidad": 3,
+    "habilidades": [
+      {
+        "nombre": "Disparo Místico",
+        "descripcion": "Inflige 3 puntos de daño al objetivo.",
+        "cooldown": 1
+      }
+    ],
+    "lore": "Ezreal es un aventurero audaz y explorador talentoso.",
+    "imagen": "https://static.wikia.nocookie.net/leagueoflegendsoficial/images/c/c3/EzrealSquare.png/revision/latest/scale-to-width-down/100?cb=20160910010150&path-prefix=es"
+  }
+]
