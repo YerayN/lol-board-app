@@ -3,14 +3,28 @@ body {
   text-align: center;
   padding: 20px;
 }
+
 button {
   display: block;
   margin: 10px auto;
   padding: 10px;
   font-size: 16px;
 }
+
+#listaCampeones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
 #listaCampeones img {
-  width: 150px;
+  width: 100%;
   border-radius: 10px;
-  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#listaCampeones img:hover {
+  transform: scale(1.05);
 }

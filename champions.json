@@ -2,31 +2,17 @@
   {
     "nombre": "Jinx",
     "rol": "Tirador",
+    "imagen": "img/champions/Jinx.png",
     "vidaBase": 20,
     "velocidad": 2,
-    "habilidades": [
-      {
-        "nombre": "Chispitas",
-        "descripcion": "Inflige 4 puntos de daño al objetivo.",
-        "cooldown": 2
-      }
-    ],
-    "lore": "Jinx es una criminal caótica...",
-    "imagen": "https://ddragon.leagueoflegends.com/cdn/14.16.1/img/champion/Jinx.png"
+    "lore": "Jinx es una criminal caótica..."
   },
   {
     "nombre": "Ezreal",
     "rol": "Tirador",
+    "imagen": "img/champions/Ezreal.png",
     "vidaBase": 18,
     "velocidad": 3,
-    "habilidades": [
-      {
-        "nombre": "Disparo Místico",
-        "descripcion": "Inflige 3 puntos de daño al objetivo.",
-        "cooldown": 1
-      }
-    ],
-    "lore": "Ezreal es un aventurero audaz...",
-    "imagen": "https://ddragon.leagueoflegends.com/cdn/14.16.1/img/champion/Ezreal.png"
+    "lore": "Ezreal es un aventurero audaz..."
   }
 ]
