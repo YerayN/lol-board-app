@@ -9,15 +9,10 @@
         "nombre": "Chispitas",
         "descripcion": "Inflige 4 puntos de daño al objetivo.",
         "cooldown": 2
-      },
-      {
-        "nombre": "Supermegacohete",
-        "descripcion": "Inflige 6 puntos de daño en área.",
-        "cooldown": 5
       }
     ],
-    "lore": "Jinx es una criminal caótica que vive para sembrar el caos.",
-    "imagen": "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Jinx_0.jpg"
+    "lore": "Jinx es una criminal caótica...",
+    "imagen": "https://ddragon.leagueoflegends.com/cdn/14.16.1/img/champion/Jinx.png"
   },
   {
     "nombre": "Ezreal",
@@ -31,7 +26,7 @@
         "cooldown": 1
       }
     ],
-    "lore": "Ezreal es un aventurero audaz y explorador talentoso.",
-    "imagen": "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Ezreal_0.jpg"
+    "lore": "Ezreal es un aventurero audaz...",
+    "imagen": "https://ddragon.leagueoflegends.com/cdn/14.16.1/img/champion/Ezreal.png"
   }
 ]
