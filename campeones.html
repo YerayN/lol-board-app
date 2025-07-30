@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campeones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="window.location.href='index.html'">← Volver</button>
+  <h2>Lista de Campeones</h2>
+  <div id="listaCampeones"></div>
+
+  <script>
+    fetch("champions.json")
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById("listaCampeones");
+        lista.innerHTML = "";
+        data.forEach(campeon => {
+          const img = document.createElement("img");
+          img.src = campeon.imagen;
+          img.alt = campeon.nombre;
+          img.className = "campeon-img";
+          img.addEventListener("click", () => {
+            window.location.href = `perfil.html?nombre=${encodeURIComponent(campeon.nombre)}`;
+          });
+          lista.appendChild(img);
+        });
+      });
+  </script>
+</body>
+</html>

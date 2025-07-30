@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Campeón</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="window.location.href='campeones.html'">← Volver</button>
+  <div id="contenidoPerfil"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombreCampeon = urlParams.get('nombre');
+
+    fetch("champions.json")
+      .then(response => response.json())
+      .then(data => {
+        const campeon = data.find(c => c.nombre === nombreCampeon);
+        const perfil = document.getElementById("contenidoPerfil");
+        perfil.innerHTML = `
+          <img src="${campeon.imagen}" alt="${campeon.nombre}">
+          <h2>${campeon.nombre}</h2>
+          <p><strong>Rol:</strong> ${campeon.rol}</p>
+          <p><strong>Vida:</strong> ${campeon.vidaBase}</p>
+          <p><strong>Velocidad:</strong> ${campeon.velocidad}</p>
+          <h3>Habilidades:</h3>
+          ${campeon.habilidades ? campeon.habilidades.map(h => `
+            <div class="habilidad">
+              <strong>${h.nombre}</strong> (CD: ${h.cooldown})
+              <p>${h.descripcion}</p>
+            </div>
+          `).join('') : ''}
+          <h3>Lore</h3>
+          <p>${campeon.lore}</p>
+        `;
+      });
+  </script>
+</body>
+</html>
