@@ -11,6 +11,7 @@ button {
   font-size: 16px;
 }
 
+/* Cuadrícula campeones */
 #listaCampeones {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -28,3 +29,29 @@ button {
 #listaCampeones img:hover {
   transform: scale(1.05);
 }
+
+/* Perfil de campeón */
+#perfilCampeon {
+  padding: 10px;
+  text-align: center;
+}
+
+#perfilCampeon img {
+  width: 90%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+#contenidoPerfil h2 {
+  margin: 10px 0;
+}
+
+.habilidad {
+  background: #222;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px 0;
+  text-align: left;
+}
+

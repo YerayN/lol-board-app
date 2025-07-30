@@ -1,14 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOL Board Game App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
   <h1>LOL Board Game</h1>
   <button id="nuevaPartida">Nueva Partida</button>
   <button id="continuarPartida">Continuar Partida</button>
   <button id="campeones">Campeones</button>
 
+  <!-- Pantalla de campeones -->
   <div id="pantallaCampeones" style="display:none;">
     <h2>Lista de Campeones</h2>
     <div id="listaCampeones"></div>
     <button id="cerrarCampeones">Cerrar</button>
   </div>
 
+  <!-- Perfil de campeón -->
+  <div id="perfilCampeon" style="display:none;">
+    <button id="volverGaleria">← Volver</button>
+    <div id="contenidoPerfil"></div>
+  </div>
+
   <script src="script.js"></script>
 </body>
+</html>
