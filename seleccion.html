@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2 id="posicion">Selecciona campeón para: TOP</h2>
+  <h2 id="posicion">Posición: TOP</h2>
   <div id="listaCampeones"></div>
 
   <script>
-    const posiciones = ["TOP", "JUNGLA", "MID", "ADC", "SUPPORT"];
+    const posiciones = ["TOP", "JNG", "MID", "ADC", "SUP"];
     let seleccionados = {};
     let indicePosicion = 0;
 
     function actualizarPosicion() {
       document.getElementById("posicion").textContent =
-        `Selecciona campeón para: ${posiciones[indicePosicion]}`;
+        `Posición: ${posiciones[indicePosicion]}`;
     }
 
     function seleccionarCampeon(nombre) {
