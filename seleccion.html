@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Campeones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 id="posicion">Selecciona campeón para: TOP</h2>
+  <div id="listaCampeones"></div>
+
+  <script>
+    const posiciones = ["TOP", "JUNGLA", "MID", "ADC", "SUPPORT"];
+    let seleccionados = {};
+    let indicePosicion = 0;
+
+    function actualizarPosicion() {
+      document.getElementById("posicion").textContent =
+        `Selecciona campeón para: ${posiciones[indicePosicion]}`;
+    }
+
+    function seleccionarCampeon(nombre) {
+      seleccionados[posiciones[indicePosicion]] = nombre;
+      indicePosicion++;
+      if (indicePosicion < posiciones.length) {
+        actualizarPosicion();
+      } else {
+        localStorage.setItem("campeonesSeleccionados", JSON.stringify(seleccionados));
+        window.location.href = "partida.html";
+      }
+    }
+
+    fetch("champions.json")
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById("listaCampeones");
+        lista.innerHTML = "";
+        data.forEach(campeon => {
+          const img = document.createElement("img");
+          img.src = campeon.imagen;
+          img.alt = campeon.nombre;
+          img.className = "campeon-img";
+          img.addEventListener("click", () => seleccionarCampeon(campeon.nombre));
+          lista.appendChild(img);
+        });
+      });
+
+    actualizarPosicion();
+  </script>
+</body>
+</html>

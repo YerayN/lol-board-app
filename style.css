@@ -22,4 +22,9 @@ button {
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.campeon-img:hover {
+  transform: scale(1.05);
 }
