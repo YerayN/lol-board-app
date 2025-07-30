@@ -12,12 +12,14 @@ document.getElementById("campeones").addEventListener("click", () => {
         div.innerHTML = `
           <h3>${campeon.nombre}</h3>
           <p>Rol: ${campeon.rol}</p>
+          <img src="${campeon.imagen}" alt="${campeon.nombre}" width="100">
           <button onclick="verDetalles('${campeon.nombre}')">Ver Detalles</button>
           <hr>
         `;
         lista.appendChild(div);
       });
-    });
+    })
+    .catch(error => console.error("Error al cargar campeones:", error));
 });
 
 document.getElementById("cerrarCampeones").addEventListener("click", () => {
